@@ -28,8 +28,8 @@ public class WelcomeActivityFragmentEasy extends Fragment {
         int layout_id = R.layout.walkthrough_fragment_easy;
         View view = inflater.inflate(layout_id, container, false);
 
-        String url3 = "https://s3.ca-central-1.amazonaws.com/grocr-albertyang/speedy-01.png";
-        String url3Thumb = "https://s3.ca-central-1.amazonaws.com/grocr-albertyang/speedy-01.png";
+        String url3 = "https://s3.ca-central-1.amazonaws.com/grocr-albertyang/speedy.png";
+        String url3Thumb = "https://s3.ca-central-1.amazonaws.com/grocr-albertyang/speedy.png";
         ImageView img3 = view.findViewById(R.id.imagePage3);
         loadImageRequest(img3, url3, url3Thumb);
 
