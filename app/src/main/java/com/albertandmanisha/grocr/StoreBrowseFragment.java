@@ -4,6 +4,8 @@ package com.albertandmanisha.grocr;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,7 +17,7 @@ import java.util.ArrayList;
 
 
 public class StoreBrowseFragment extends Fragment implements GalleryStyle9ClickListener{
-
+    Fragment walmart;
 
 
     public StoreBrowseFragment() {
@@ -69,6 +71,16 @@ public class StoreBrowseFragment extends Fragment implements GalleryStyle9ClickL
     @Override
     public void itemClicked(View view, int position) {
         int num = position + 1;
+        switch (num){
+            case 4:
+                ActionBar actionBar = ((AppCompatActivity)getActivity()).getSupportActionBar();
+                walmart = new WalmartFragment();
+                if (walmart.getActivity() == null){
+                    actionBar.setTitle("All Walmart Items");
+                    getFragmentManager().beginTransaction().add(R.id.framelayout_menu, walmart).commit();
+                }
+                break;
+        }
         Toast.makeText(this.getContext(), "Position " + num + " clicked!", Toast.LENGTH_SHORT).show();
     }
 }

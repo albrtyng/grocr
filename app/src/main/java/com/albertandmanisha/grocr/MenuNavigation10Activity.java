@@ -50,7 +50,7 @@ public class MenuNavigation10Activity extends AppCompatActivity {
                     .add(R.id.framelayout_menu, new StoreBrowseFragment()).commit();
         }
 
-        final String[] menus = {"Browse by Store", "Browse by Category", "Favourites", "Settings", "Account"};
+        final String[] menus = {"Browse by Store", "Browse by Category", "Shopping List", "Settings", "Account"};
         menuData = new ArrayList<>();
 
         for (int i=0; i< menus.length; i++){
@@ -94,7 +94,7 @@ public class MenuNavigation10Activity extends AppCompatActivity {
                         ActionBar actionBar1 = getSupportActionBar();
                         if (actionBar1 != null) {
                             actionBar1.setDisplayShowTitleEnabled(true);
-                            actionBar1.setTitle("Favourites");
+                            actionBar1.setTitle("Shopping List");
                         }
                         break;
                     default:
@@ -125,7 +125,7 @@ public class MenuNavigation10Activity extends AppCompatActivity {
 
         @Override
         public void onPanelClosed(View arg0) {
-            // TODO Auto-genxxerated method stub
+            // TODO Auto-generated method stub
 
         }
 

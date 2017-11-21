@@ -3,22 +3,24 @@ package com.albertandmanisha.grocr;
 /**
  * @author albertyang .
  */
-public class GalleryStyle9Model {
+public class ItemModel {
 
-    public GalleryStyle9Model(String mTitle, String mAddress, String url){
+    public ItemModel(String mTitle, String mCategory, String url, Double mPrice){
         title = mTitle;
-        address = mAddress;
+        category = mCategory;
         imageUrl = url;
+        price = mPrice;
     }
 
-    public GalleryStyle9Model(){
+    public ItemModel(){
 
     }
 
     private String id;
     private String imageUrl;
     private String title;
-    private String address;
+    private String category;
+    private Double price;
 
     public String getId() {
         return id;
@@ -44,11 +46,15 @@ public class GalleryStyle9Model {
         this.title = title;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCategory() {
+        return category;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setCategory(String category) {
+        this.category = category;
     }
+
+    public Double getPrice() {return price;}
+
+    public void setPrice(Double price) {this.price = price;}
 }
