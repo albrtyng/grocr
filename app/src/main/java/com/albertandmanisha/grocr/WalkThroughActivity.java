@@ -9,7 +9,6 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 public class WalkThroughActivity extends AppCompatActivity implements View.OnClickListener {
     private ViewPager viewPager;
@@ -127,10 +126,9 @@ public class WalkThroughActivity extends AppCompatActivity implements View.OnCli
                 finish();
                 break;
             case R.id.btnSkip:
-                Toast.makeText(this, "Button Skip clicked!", Toast.LENGTH_SHORT).show();
-//                skipIntent = new Intent(WalkThroughActivity.this, );
-//                startActivity(skipIntent);
-//                finish();
+                skipIntent = new Intent(WalkThroughActivity.this, MenuNavigation10Activity.class);
+                startActivity(skipIntent);
+                finish();
                 break;
             default:
                 break;
